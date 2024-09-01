@@ -12,7 +12,7 @@ export default async function createQuestionCollection() {
     Permission.update("users"),
     Permission.delete("users"),
   ]);
-  console.log("Question collection is created");
+  // console.log("Question collection is created");
 
   // creation attributes and indexes
 
@@ -52,7 +52,7 @@ export default async function createQuestionCollection() {
       false
     ),
   ]);
-  console.log("Question Attributes created");
+  // console.log("Question Attributes created");
 
   // create indexes
 

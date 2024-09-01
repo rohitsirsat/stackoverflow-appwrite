@@ -5,7 +5,7 @@ import { storage } from "@/models/server/config";
 export default async function getOrCreateStorage() {
   try {
     await storage.getBucket(questionAttachmentBucket);
-    console.log("Storage Connected");
+    console.log("Storage Created");
   } catch (error) {
     try {
       await storage.createBucket(
@@ -18,13 +18,13 @@ export default async function getOrCreateStorage() {
           Permission.update("users"),
           Permission.delete("users"),
         ],
-        undefined,
+        false,
         undefined,
         undefined,
         ["jpg", "png", "gif", "jpeg", "webp", "heic"]
       );
 
-      console.log("Storage Created");
+      console.log("Storage Create");
       console.log("Storage Connected");
     } catch (error) {
       console.error("Error creating storage:", error);

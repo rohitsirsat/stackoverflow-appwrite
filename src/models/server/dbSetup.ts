@@ -13,7 +13,7 @@ export default async function getOrCreateDB() {
   } catch (error) {
     try {
       await databases.create(db, db);
-      console.log("Database Created");
+      console.log("Database Create");
       // Create Collections
       await Promise.all([
         createQuestionCollection(),
@@ -21,8 +21,8 @@ export default async function getOrCreateDB() {
         createCommentCollection(),
         createVoteCollection(),
       ]);
-      console.log("Collection created");
-      console.log("Database Connected");
+      console.log("Collection create");
+      console.log("Database Connect");
     } catch (error) {
       console.error("Error creating database or collection: ", error);
     }
