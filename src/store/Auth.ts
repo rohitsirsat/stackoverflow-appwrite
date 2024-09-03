@@ -105,6 +105,8 @@ export const useAuthStore = create<IAuthStore>()(
         }
       },
     })),
+
+    // configuration options
     {
       name: "auth",
       onRehydrateStorage() {
